@@ -1,6 +1,9 @@
 import sys
 import logging
 
+# ToDo: Doulbecheck two-space indentation is correct
+INDENDATION = "  "
+
 class Node:
     def __init__(self, name):
         self.name = name
@@ -78,18 +81,33 @@ class DirectoryTree:
 
     def _print_node(self, node, level):
         if level >= 0:
-            indent = "  " * level
+            indent = INDENDATION * level
             print(indent + node.name)
+        # Print children in alphavetical order    
         for child in sorted(node.children.values(), key=lambda child: child.name):
             self._print_node(child, level + 1)
-        
 
 
 def main():
+    # program instructions
+    print("Welcome to Directories!")
+    print("Instructions:")
+    print("1. Enter commands to interact")
+    print("2. Available commands: CREATE, MOVE, DELETE, LIST")
+    print("3. Use the following format:")
+    print("   - CREATE <path>")
+    print("   - MOVE <source> <destination>")
+    print("   - DELETE <path>")
+    print("   - LIST")
+    print("4. Press Ctrl+C to exit the program.")
+
+    # Create an instance of the DirectoryTree
     directories = DirectoryTree()
 
     for line in sys.stdin:
         line = line.strip()
+        # ToDo: Check if it should echo the input command
+        # print(line)
         split_line = line.split(" ", 1)
 
         if len(split_line) >= 2:
