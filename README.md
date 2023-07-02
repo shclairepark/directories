@@ -14,6 +14,7 @@ python3 directories.py
 ### Usage
 
 1. Create and List directories
+
 Input:
 ```
 CREATE fruits
