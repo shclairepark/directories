@@ -69,6 +69,7 @@ LIST
 
 Output:
 ```
+Cannot delete fruits/apples - fruits does not exist
 foods
   fruits
   grains
