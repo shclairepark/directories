@@ -91,3 +91,9 @@ foods
   vegetables
     squash
 ```
+
+### Unit Tests
+
+```
+python3 tests.py
+```
