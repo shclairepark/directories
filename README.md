@@ -77,7 +77,7 @@ foods
     squash
 ```
 
-### Unit Tests
+### Run Unit Tests
 
 ```
 python3 tests.py
